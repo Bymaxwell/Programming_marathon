@@ -39,9 +39,16 @@ while True:
                     maneiras += 1
             break
         else:
+            #Atualização soma de maneiras
             for j in range(i+1, len(primos_totais)):
-                if primos_totais[i]+primos_totais[j] <= a:
-                    maneiras += 1
+                if primos_totais[j]>a-primos_totais[i]:
+                    maneiras += j-i-1
+                    break
+                elif j == len(primos_totais)-1:
+                    maneiras += j-i
+                    
+                
+                
         print(maneiras)
     print(maneiras)
             
