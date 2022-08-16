@@ -14,6 +14,7 @@ def primos(a):
                 break
         if primo:
             primos.append(i)
+            print(primos)
         i += 1
     return primos 
 
@@ -28,8 +29,11 @@ while True:
         print(0)
     else:
         primos_totais = primos(a)
+        
     maneiras = 0
-    for i in range(len(primos_totais)-1):
+    for i in range(len(primos_totais)):
+        if primos_totais[i] == a:
+            maneiras += 1
         for j in range(i+1, len(primos_totais)):
             if primos_totais[i]+primos_totais[j] <= a:
                 maneiras += 1
