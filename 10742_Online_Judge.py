@@ -1,16 +1,21 @@
 #Verificando quais os núemros primos menores ou iguais a 'a'
+
 def primos(a):
     primos = [2]
-    for i in range(3, a+1):
+    i = 3
+
+    while i<= a:
         primo = True
         for j in range(2,i):
-            if i%j == 0:
+            if j >= a**(1/2):
+                break
+            elif i%j == 0:
                 primo = False
                 break
         if primo:
             primos.append(i)
+        i += 1
     return primos 
-
 
 while True:
 
@@ -28,7 +33,6 @@ while True:
         for j in range(i+1, len(primos_totais)):
             if primos_totais[i]+primos_totais[j] <= a:
                 maneiras += 1
-                
     print(maneiras)
             
 
