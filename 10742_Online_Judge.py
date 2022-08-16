@@ -1,11 +1,17 @@
 
 def primos(a):
-    primos = []
-    primo = 2
-    for i in range(2, a+1):
-        if primo/i != 0:
-            primos.append(primo)
+    primos = [2]
+    for i in range(3, a+1):
+        primo = True
+        for j in range(2,i):
+            if i%j == 0:
+                primo = False
+                break
+        if primo:
+            primos.append(i)
+    return primos 
 
+print(primos(11))
 
 while True:
 
