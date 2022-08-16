@@ -28,6 +28,7 @@ while True:
         for j in range(i+1, len(primos_totais)):
             if primos_totais[i]+primos_totais[j] <= a:
                 maneiras += 1
+                
     print(maneiras)
             
 
