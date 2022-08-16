@@ -48,8 +48,7 @@ while True:
                     maneiras += j-i
                     
                 
-                
-        print(maneiras)
+        
     print(maneiras)
             
 
