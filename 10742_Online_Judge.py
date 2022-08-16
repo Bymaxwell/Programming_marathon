@@ -31,12 +31,18 @@ while True:
         primos_totais = primos(a)
         
     maneiras = 0
-    for i in range(len(primos_totais)):
-        if primos_totais[i] == a:
-            maneiras += 1
-        for j in range(i+1, len(primos_totais)):
-            if primos_totais[i]+primos_totais[j] <= a:
-                maneiras += 1
+    #Atualização - maneira de contar
+    for i in range(len(primos_totais)-1):
+        if (a-primos_totais[i]) <= primos_totais[i]:
+            for k in range(len(primos_totais)):
+                if primos_totais[k] == a:
+                    maneiras += 1
+            break
+        else:
+            for j in range(i+1, len(primos_totais)):
+                if primos_totais[i]+primos_totais[j] <= a:
+                    maneiras += 1
+        print(maneiras)
     print(maneiras)
             
 
