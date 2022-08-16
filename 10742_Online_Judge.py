@@ -14,7 +14,7 @@ def primos(a):
                 break
         if primo:
             primos.append(i)
-            print(primos)
+           
         i += 1
     return primos 
 
